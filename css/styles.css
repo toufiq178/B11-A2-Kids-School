@@ -1,82 +1,58 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 .quicksand-font {
-  font-family: "Quicksand", sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 .raleway-fonts {
-  font-family: "Raleway", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
- 
+
 /* shared list */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: "Quicksand", sans-serif;
 }
-:root{
 
-    --primary-color:#000000 ;
-    --orange-color:#FEA301 ;
-    --sky-blue-color:#01ACFD ;
-    --speech-blue-color:#5D58EF ;
-    --Cyan-color:#05D4DF ;
-       
+:root {
+
+    --primary-color: #000000;
+    --orange-color: #FEA301;
+    --sky-blue-color: #01ACFD;
+    --speech-blue-color: #5D58EF;
+    --Cyan-color: #05D4DF;
+
 }
-.display-flex{
+
+.display-flex {
     display: flex;
 }
-.fixed-width{
+
+.fixed-width {
     max-width: 1160px;
     margin: 0 auto;
 }
-.width-95{
+
+.width-95 {
     width: 95%;
 }
-.anchor{
+
+.anchor {
     font-size: 1.25rem;
-    font-weight: bold; 
+    font-weight: bold;
     text-decoration: none;
     color: var(--primary-color);
-}   
+}
 
-
-
-
-
-
-/* navbar related styles */
-.navbar{
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    margin: 20px auto;
-}
-.nav-title{
-    align-items: center;
-    gap: 10px;
-    font-size: 2rem ;
-    font-weight: bold;
-}
-.nav-link-container{
-    gap: 20px;
-}
-.nav-link-container :first-child{
-    color: var(--orange-color);
-}
-.nav-link-container :nth-child(2){
-    color: var(--sky-blue-color);
-}
-.nav-link-container :nth-child(3 ){
-    color: var(--Cyan-color);
-}
-.nav-link-container :last-child{
-    color: var(--speech-blue-color);
-}
-.nav-btn{
+.btn-primary {
     color: #ffffff;
     background-color: var(--orange-color);
     border: none;
@@ -87,50 +63,183 @@ body{
     cursor: pointer;
     z-index: 1;
 
-    transition: 
+    transition:
         color 0.4s ease,
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
 
 
-.nav-btn::after{
+.btn-primary::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     width: 200%;
     height: 200%;
-    background-color: var(--speech-blue-color);
+    background-color: var(--primary-color);
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
-    transition: 
+    transition:
         transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
         background-color 0.4s ease;
     z-index: -1;
 }
 
 
-.nav-btn:hover{
+.btn-primary:hover {
     color: #ffffff;
     transform: scale(1.03);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.nav-btn:hover::after{
+.btn-primary:hover::after {
     transform: translate(-50%, -50%) scale(1);
 }
 
 
-.nav-btn:focus-visible{
+.btn-primary:focus-visible {
     outline: 2px solid #ffffff;
     outline-offset: 4px;
 }
 
 
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion: reduce) {
+
     .nav-btn,
-    .nav-btn::after{
+    .nav-btn::after {
         transition: none;
     }
+}
+
+
+
+
+
+/* navbar related styles */
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.nav-title {
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-link-container {
+    gap: 20px;
+}
+
+.nav-link-container :first-child {
+    color: var(--orange-color);
+}
+
+.nav-link-container :nth-child(2) {
+    color: var(--sky-blue-color);
+}
+
+.nav-link-container :nth-child(3) {
+    color: var(--Cyan-color);
+}
+
+.nav-link-container :last-child {
+    color: var(--speech-blue-color);
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+/* banner related styles */
+.banner {
+    margin-top: 50px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.banner-container{
+    width: 50%;
+}
+
+.banner-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.banner-title .Empowering {
+    color: var(--orange-color);
+}
+
+.banner-title .towards-vision {
+    color: var(--sky-blue-color);
+}
+
+.banner-description {
+    font-size: 1.25rem;
+    color: #111111;
+    margin-bottom: 24px;
+}
+
+.banner-btn {
+    background-color: #111111;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.banner-btn::after {
+    content: "";
+    background-color: var(--orange-color); 
+}
+
+.banner-img-container>img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive for mobile device */
+@media screen and (max-width:576px) {
+
+    .nav-title>h3,
+    .nav-link-container,
+    .navbar>button {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: inline-block;
+        font-size: 2rem;
+    }
+
+    /* banner related styles */
+    .banner {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .banner-container{
+    width: 100%;
+}
+
+
+
+
+
+
+
 }
