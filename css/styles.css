@@ -52,6 +52,13 @@ body {
     color: var(--primary-color);
 }
 
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+
+}
+
 .btn-primary {
     color: #ffffff;
     background-color: var(--orange-color);
@@ -162,7 +169,8 @@ body {
     align-items: center;
     gap: 50px;
 }
-.banner-container{
+
+.banner-container {
     width: 50%;
 }
 
@@ -191,18 +199,117 @@ body {
     font-size: 1.25rem;
     font-weight: bold;
 }
+
 .banner-btn::after {
     content: "";
-    background-color: var(--orange-color); 
+    background-color: var(--orange-color);
 }
 
-.banner-img-container>img{
+.banner-img-container>img {
     width: 100%;
 }
 
+/* curriculum related styles */
+.curriculum-section {
+    overflow: hidden;
+    background-image: url("../assets/bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    background-position: center center;
+}
 
+.curriculum {
+    text-align: center;
+    margin-top: 70px;
+}
 
+.curriculum-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 50px;
+}
 
+.curriculum-card {
+    max-width: 376px;
+    max-height: 476px;
+    border: 1px solid rgb(222, 245, 255, 1);
+    padding: 20px;
+    z-index: 5;
+    border-radius: 18px;
+    background: linear-gradient(rgba(222, 245, 255, 1), rgb(255, 255, 255));
+    box-shadow: 0 0 28px 1px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #202020;
+    margin: 32px auto;
+}
+
+.card-description {
+    font-weight: 500;
+    font-size: 0.9rem;
+    font-family: "Raleway", sans-serif;
+    color: #808080;
+    margin-bottom: 33px;
+}
+
+.read-more {
+    color: var(--Cyan-color);
+    cursor: pointer;
+}
+
+.arrow-container {
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--orange-color);
+    text-align: center;
+    color: white;
+    cursor: pointer;
+
+}
+
+/* curriculum related styles */
+.stories {
+    overflow: hidden;
+    background:url("../assets/bg.png"), linear-gradient(rgb(255, 255, 255), #fea1014f);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.stories-container , .section-title{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.stories-content{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    
+}
+.stories-content>:first-child{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.stories-card{
+    background-color: white;
+
+}
 
 
 
@@ -231,11 +338,22 @@ body {
     .banner {
         flex-direction: column-reverse;
         gap: 30px;
+        text-align: center;
     }
-    .banner-container{
-    width: 100%;
-}
 
+    .banner-container {
+        width: 100%;
+    }
+
+    /* curriculum related styles */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .curriculum-container {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
 
 
 
